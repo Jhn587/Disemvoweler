@@ -1,0 +1,7 @@
+ToDo List
+
+Make Driver class
+Compile
+Test
+Add punctuation to the list of chars to remove
+Recreate with StringBuffer? instead of string for memory efficency
