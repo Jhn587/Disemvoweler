@@ -27,7 +27,7 @@ public class Disemvoweler{
 		for(int i = 0; i < original.length(); i++){
 			if( isAVowel(i)){
 				this.forVowels += this.original.charAt(i);
-			} else if( isASpace(i){
+			} else if( isASpace(i) ){
 				//Do Nothing
 			} else{//Adds punctuation to the cons string, maybe we fix this later
 				this.forCons += this.original.charAt(i);
@@ -46,11 +46,12 @@ public class Disemvoweler{
 			case 'o':
 			case 'u':
 				return true;
-				break;
+				
 			default:
 				return false;
-				break;
+				
 		}
+		
 	}
 	//Returns true if the character at the index of the original string is a space
 	//Expand to punctuation
@@ -69,5 +70,10 @@ public class Disemvoweler{
 	}
 	public String getOriginal(){
 		return this.original;
+	}
+	
+	public String toString(){
+		return "Original: " + this.getOriginal() +"\n" + "Consonants: " + this.getConsonants() + "\n" +
+					"Vowels: " + this.getVowels();
 	}
 }

@@ -1,5 +1,6 @@
 ToDo List
 
+Make toString
 Make Driver class
 Compile
 Test
