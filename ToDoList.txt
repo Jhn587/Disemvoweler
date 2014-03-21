@@ -1,8 +1,6 @@
 ToDo List
 
-Make toString
-Make Driver class
-Compile
 Test
+Add capital Letters to switch statement in Disemvoweler
 Add punctuation to the list of chars to remove
 Recreate with StringBuffer? instead of string for memory efficency
