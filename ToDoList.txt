@@ -1,7 +1,6 @@
 ToDo List
 
-Add More Functunality to Driver
 Test
-Add capital Letters to switch statement in Disemvoweler
+
 Add punctuation to the list of chars to remove
 Recreate with StringBuffer? instead of string for memory efficency
