@@ -62,9 +62,27 @@ public class Disemvoweler{
 	}
 	//Returns true if the character at the index of the original string is a space
 	//Expand to punctuation
+	//Use regex to select any non letter character
 	private boolean isASpaceOrPunctuation(int index){
 		char toCheck = this.original.charAt(index);
-		return (toCheck == ' ')? true : false;
+		boolean toReturn = false;
+		switch(toCheck){
+			case ' ':
+			case '/':
+			case '\\':
+			case '.':
+			case '!':
+			case ',':
+			case '>':
+			case '<':
+			case '?':
+			case '"':
+			case '\'':
+				toReturn = true;
+				break;
+		}
+		
+		return toReturn;
 	
 	}
 	

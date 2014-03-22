@@ -1,6 +1,9 @@
 ToDo List
 
 Test
-
-Add punctuation to the list of chars to remove
+Change punctuation checker to check using regex
 Recreate with StringBuffer? instead of string for memory efficency
+
+
+
+Project Runs well right now
