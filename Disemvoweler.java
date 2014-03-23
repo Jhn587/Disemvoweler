@@ -16,9 +16,17 @@ public class Disemvoweler{
 	private String original = "";
 	private String forCons = "";
 	private String forVowels = "";
+	//Doesn't need to be imported bc its apart of java.lang
+	//StringBuilder is faster than StringBuffer
+	//BUT StringBuilder is not safe for multiple threads
+	//This application does not use multiple threads so we will use StringBuilder.
+	private StringBuilder forConsSB;
+	private StringBuilder forVowelsSB;
 	
 	public Disemvoweler(String input){
 		this.original = input;
+		this.forConsSB = new StringBuilder(input.length());
+		this.forVowelsSB = new StringBuilder(input.length());
 		disemvowel();
 	}
 	
@@ -26,13 +34,18 @@ public class Disemvoweler{
 	private void disemvowel(){
 		for(int i = 0; i < original.length(); i++){
 			if( isAVowel(i)){
-				this.forVowels += this.original.charAt(i);
+				this.forVowelsSB.append(this.original.charAt(i));
+				//this.forVowels += this.original.charAt(i);
 			} else if( isASpaceOrPunctuation(i) ){
 				//Do Nothing
 			} else{//Adds punctuation to the cons string, maybe we fix this later
-				this.forCons += this.original.charAt(i);
+				this.forConsSB.append(this.original.charAt(i));
+				//this.forCons += this.original.charAt(i);
 			}
 		}
+		this.forVowels = this.forVowelsSB.toString();
+		this.forCons = this.forConsSB.toString();
+		
 	}
 		
 	//Returns true if the character at the index is a vowel	

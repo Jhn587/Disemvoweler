@@ -2,8 +2,6 @@ ToDo List
 
 Test
 Change punctuation checker to check using regex
-Recreate with StringBuffer? instead of string for memory efficency
-
-
 
 Project Runs well right now
+StringBuilder is implemented, should allow faster/more efficient runtimes with long strings
