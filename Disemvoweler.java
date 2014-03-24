@@ -25,6 +25,7 @@ public class Disemvoweler{
 	
 	public Disemvoweler(String input){
 		this.original = input;
+		this.original = this.original.replaceAll("[^A-Za-z0-9 ]","");
 		this.forConsSB = new StringBuilder(input.length());
 		this.forVowelsSB = new StringBuilder(input.length());
 		disemvowel();
@@ -32,11 +33,14 @@ public class Disemvoweler{
 	
 	//Does the work for the class
 	private void disemvowel(){
+	
+		
 		for(int i = 0; i < original.length(); i++){
 			if( isAVowel(i)){
 				this.forVowelsSB.append(this.original.charAt(i));
 				//this.forVowels += this.original.charAt(i);
-			} else if( isASpaceOrPunctuation(i) ){
+				
+			} else if( false /*isASpaceOrPunctuation(i)*/ ){
 				//Do Nothing
 			} else{//Adds punctuation to the cons string, maybe we fix this later
 				this.forConsSB.append(this.original.charAt(i));

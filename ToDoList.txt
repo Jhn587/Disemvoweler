@@ -1,7 +1,9 @@
 ToDo List
+Fix project - Project no longer works
 
-Test
-Change punctuation checker to check using regex
+
+Test - See if regex is faster than a for loop and switch statements with StringBuilder
+
 
 Project Runs well right now
 StringBuilder is implemented, should allow faster/more efficient runtimes with long strings
