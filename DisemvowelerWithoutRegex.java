@@ -1,18 +1,5 @@
-/**
-First iteration of Disemvoweler
+public class DisemvowelerWithoutRegex {
 
-ToDo
-Compile
-Test
-Add punctuation to the list of chars to remove
-Recreate with StringBuffer? instead of string for memory efficency
-
-
-
-
-*/
-
-public class Disemvoweler{
 	private String original = "";
 	private String forCons = "";
 	private String forVowels = "";
@@ -23,9 +10,9 @@ public class Disemvoweler{
 	private StringBuilder forConsSB;
 	private StringBuilder forVowelsSB;
 	
-	public Disemvoweler(String input){
+	public DisemvowelerWithoutRegex(String input){
 		this.original = input;
-		this.original = this.original.replaceAll("[^A-Za-z]","");
+		//this.original = this.original.replaceAll("[^A-Za-z]","");
 		this.forConsSB = new StringBuilder(input.length());
 		this.forVowelsSB = new StringBuilder(input.length());
 		disemvowel();
@@ -40,7 +27,7 @@ public class Disemvoweler{
 				this.forVowelsSB.append(this.original.charAt(i));
 				//this.forVowels += this.original.charAt(i);
 				
-			} else if( false /*isASpaceOrPunctuation(i)*/ ){
+			} else if( isASpaceOrPunctuation(i) ){
 				//Do Nothing
 			} else{//Adds punctuation to the cons string, maybe we fix this later
 				this.forConsSB.append(this.original.charAt(i));
@@ -118,4 +105,5 @@ public class Disemvoweler{
 		return "Original: " + this.getOriginal() +"\n" + "Consonants: " + this.getConsonants() + "\n" +
 					"Vowels: " + this.getVowels();
 	}
+
 }

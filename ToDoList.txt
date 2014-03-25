@@ -1,8 +1,8 @@
 ToDo List
-Fix project - Project no longer works
 
 
-Test - See if regex is faster than a for loop and switch statements with StringBuilder
+
+Test - See if regex is faster than a for loop and switch statements with StringBuilder -- Looks like regex is slower than switch statements
 
 
 Project Runs well right now
